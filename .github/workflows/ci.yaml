@@ -1,4 +1,4 @@
-name: Deploy
+name: ci
 
 on:
   push:
@@ -17,33 +17,7 @@ jobs:
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
       run: |
-        echo -----BEGIN RSA PRIVATE KEY-----
-MIIEowIBAAKCAQEAj4lFiyiWQLCZp8E+s3dsN1i+MEd8Klww9atxKp7xTUNhv86+
-MasnO5GONZxWkNXbUNPAg3rtEfbFTjwEjflXJpAlOKzxjZcu3NureqqETjeS+wWW
-vLHIepB1BLIIqnfWcAHwxvygoXCt9YAudpBSrZtJTLjhxRom5fQZjH/zPsZcsV0X
-EHapktpoJVcxcse9fp02F2k8OKBMmOwQht8h99yK7aseNusDDz8xYZrrDioc/Vxg
-ifWHYNlzsl4KvYT38sEu3KKjXWg5swhzufps5Buv5dyc3NAzyT2ZCO6EMjnyeLgd
-UfoRtyE90b05yloGFDUnAajyqFRcLGRYVgn5EQIDAQABAoIBACCgcmdkbWr8+aBx
-Q8Blp/qYuHqe9TFnzVU6iDnI8U6/v0trQj5mCj/3IR08kUzQ385qo7r/ST4pGsZi
-zCI9iDrizyMn5KxrriJT6JG0iuiAp29Z4N65hrmddov/sAqXvO2u8z04FYc85r4E
-Sgt3WOPPhYTkDaXRAQCKUPhn6THea6HPicFPp4XNkocq+Ad2G8mBbrO/g5tYH7/k
-DTbcbkoc2+Xwz7OislHn99wOJ/Vk/AfvMyRL08HxnsT2UQ3UBA4n4P4EU2QN+2xD
-yClapT9Mfzin9mYDH7A8EatiBipGMXIdmBkAJYxsh1HgDIJ1PMBB3rsSwTJgRPnI
-hOnIeHECgYEA0N5Dh8vF89SpCOAuZW8UvA5E09rlJ6rRGmj9jP0VN3EEvf7vmXlb
-gbqpUphL4eXG6cHkUD/fppIXmIxuV9U+8bI4Ykxk9aLMdPRE2ZdF6Tp8KqIUmpZc
-NWPS7KcVPfCeqwhQBe6nqETanVjlOF0sGrfiBbzwLAMAOA6B8uS0V2UCgYEAr+z1
-uEpsRClfO3qcwXSm1aiwo/+/SuTwtFxf6eRBQtRTend+OhmLEoNooIahx5shaO+P
-c14fkcMZfFAsvQ+bqFokAioJyoYevesqbYWWyqusKNfOjiipwKU+pdyJDAeM86z7
-XDyZxThLIjWYBTuWuZ6lmXEZ98Hhr2XGySSZLj0CgYAo3GKPrWCze9X5w4mwFFQV
-GiGC5J7R7Mvtg76el2BQMU8BMF+FQcWSEodPfjXSIpaQYnsc6/H/7zKoiEiJ7FDd
-DcWUDWfu2gNvmd3iR4LIxsVFveGUAHhXhYjc/S7dqDYSNZUaI/8unxG5mIt3RFr9
-ex2/i5/crFWdodDwSKezNQKBgQCevjL7GCyZVLuZ8AmChsAECzNYyGzUJ8EK/k+N
-vWkl5HFvEGPWCTZ0fh7qupFAi7qZ9ZB7iXLzFBjrE21LK8pJHw1e5o/vLxaOSKUA
-LoriVgYC1LiNjiOesXzWLSl8sVN+jZhComweia1CMRn7nslitMS4sFW+OjRrEGtP
-FLckAQKBgBfRiOTTSfjEn5uaAYT/dkRRkTazqBEq8x3nqxl/1jzYpFCMfXODHOIV
-8ZoQjx6/sZFtvoYtjt3TFWzP/jEnvLyZq/r2l6CImPYM4GxuF5do6GYFkXNGRmnc
-X0jGxga/qvI75ePQU6+s/v9m0zvYcYoLJuEVBd1Sf+Z6ZzfQkM05
------END RSA PRIVATE KEY----- > keyfile
+        echo "$SSH_PRIVATE_KEY" > keyfile
         chmod 600 keyfile
         mkdir -p ~/.ssh
         cp known_hosts ~/.ssh/known_hosts
