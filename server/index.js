@@ -21,5 +21,5 @@ res.json({msg:"hi"})
 // DONT MISUSE THIS THANKYOU!!
 // mongoose.connect('mongodb://localhost:27017/courses', { useNewUrlParser: true, useUnifiedTopology: true, dbName: "courses" });
 
-app.listen(3000, '0.0.0.0', () => console.log('Server running on port 3000'));
+app.listen(3000,'0.0.0.0', () => console.log('Server running on port 3000'));
 
