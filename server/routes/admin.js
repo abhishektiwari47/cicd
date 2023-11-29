@@ -18,6 +18,10 @@ router.get("/me", authenticateJwt, async (req, res) => {
     })
 });
 
+router.get("/some",async (req,res)=>{
+  res.json({"message":"This is great"});
+})
+
 router.post('/signup', (req, res) => {
     const { username, password } = req.body;
     function callback(admin) {
