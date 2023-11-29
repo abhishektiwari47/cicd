@@ -19,7 +19,7 @@ router.get("/me", authenticateJwt, async (req, res) => {
 });
 
 router.get("/some",async (req,res)=>{
-  res.json({"message":"This is so great..lund"});
+  res.json({"message":"This is so greatdfd..lund"});
 })
 
 router.post('/signup', (req, res) => {
