@@ -20,5 +20,5 @@ jobs:
         echo "$SSH_PRIVATE_KEY" > keyfile
         chmod 600 keyfile
         mkdir -p ~/.ssh
-        ssh-keyscan -H ec2-3-110-118-39.ap-south-1.compute.amazonaws.com >> ~/.ssh/known_hosts
-        ssh -t -i keyfile -o StrictHostKeyChecking=no ubuntu@ec2-3-110-118-39.ap-south-1.compute.amazonaws.com "sudo bash ~/deploy2.sh" 
+        ssh-keyscan -H ec2-15-207-89-47.ap-south-1.compute.amazonaws.com >> ~/.ssh/known_hosts
+        ssh -t -i keyfile -o StrictHostKeyChecking=no ubuntu@ec2-15-207-89-47.ap-south-1.compute.amazonaws.com "sudo bash ~/deploy2.sh" 
